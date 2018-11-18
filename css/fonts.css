@@ -1,0 +1,83 @@
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+	
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	}
+	
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../fonts/SourceSansPro-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	}
+	
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../fonts/SourceSansPro-Bold-Italic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+	}
+	
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+	
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	}
+	
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	}
+	
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Bold-Italic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+	}
+	
+@font-face {
+	font-family: 'Aleo';
+	src: url('../fonts/Aleo-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+	
+@font-face {
+	font-family: 'Aleo';
+	src: url('../fonts/Aleo-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	}
+	
+@font-face {
+	font-family: 'Aleo';
+	src: url('../fonts/Aleo-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	}
+	
+@font-face {
+	font-family: 'Aleo';
+	src: url('../fonts/Aleo-Bold-Italic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+	}

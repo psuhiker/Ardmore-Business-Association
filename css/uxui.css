@@ -1,0 +1,72 @@
+a {
+    
+}
+
+    a:hover {
+        
+    }
+    
+    a:visited {
+        
+    }
+    
+    a.button {
+    }
+    
+        a.button:hover {
+        }
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+p {
+    
+}
+
+ol {
+    
+}
+
+    ol li {
+        
+    }
+    
+ul {
+    
+}
+
+    ul li {
+        
+    }
+    
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+    
+input[type=text], input[type=password] {
+}
+
+input[type=submit], button {
+}
+
+    input[type=submit]:hover, button:hover {
+    }
+
+textarea {
+    
+}

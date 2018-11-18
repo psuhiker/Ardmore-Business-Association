@@ -1,0 +1,23 @@
+@import "fonts.css";
+
+#tinymce {
+	border-left:  0px solid  rgba(0,0,0,0.25) !important;
+	font-family:  Lato, sans-serif !important;
+	font-size: 16pt !important;
+	padding: 8px 15px !important;
+	height: auto !important;
+	box-shadow: none !important;
+	transition: all 0.2s !important;
+	-webkit-transition: all 0.2s !important;
+	-moz-transition: all 0.2s !important;
+	margin:  0px 10px 0px 0px !important;
+}
+
+	#tinymce:focus {
+		border-left:  10px solid  rgba(0,0,0,0.25) !important;
+		box-shadow: none !important;
+		transition: all 0.2s !important;
+		-webkit-transition: all 0.2s !important;
+		-moz-transition: all 0.2s !important;
+		margin-right: 0px !important;
+	}

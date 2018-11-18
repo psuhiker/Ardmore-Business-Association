@@ -1,0 +1,127 @@
+body {
+	background-color: transparent;
+}
+
+#wpadminbar,
+#adminmenuback,
+#adminmenuwrap,
+h1.wp-heading-inline,
+.page-title-action,
+#titlediv div.inside,
+#acf-aba_membership,
+#acf-member_id,
+#screen-options-link-wrap,
+#wpfooter,
+#acf-promoted,
+#businesses_categoriesdiv,
+#tagsdiv-post_tag,
+#delete-action,
+#minor-publishing-actions,
+#misc-publishing-actions,
+#submitdiv h2,
+#submitdiv button,
+#postimagediv,
+.user-rich-editing-wrap,
+.user-admin-color-wrap,
+.user-comment-shortcuts-wrap,
+.show-admin-bar.user-admin-bar-front-wrap,
+#screen-meta,
+#screen-meta-links,
+#acf-businesses,
+.user-profile-picture,
+.user-description-wrap,
+.user-url-wrap,
+#profile-page h1,
+#profile-page h2:nth-child(4),
+#profile-page h2:nth-child(10),
+#acf-map_override,
+#acf-expiration {
+    display: none !important;
+}
+
+html.wp-toolbar {
+	padding-top:  0px;
+}
+
+#submitdiv, #major-publishing-actions {
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+}
+
+#error-page > ul {
+	display: none;
+}
+
+#wpbody {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+div#publishing-action {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #fff;
+    padding: 0px 0px 40px 0px;
+}
+
+p.submit {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #fff;
+    padding: 0px 0px 15px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+#profile-page, .post-type-businesses {
+	font-family: Lato, sans-serif;
+}
+
+select {
+    height: 42px !important;
+}
+
+input[type=checkbox] {
+    margin: 12px 0px !important;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	border: 1px solid rgba(0,0,0,0.15) !important;
+	font-family:  Lato, sans-serif !important;
+	font-size: 16pt !important;
+	padding: 8px 15px !important;
+	height: auto !important;
+	box-shadow: none !important;
+	transition: all 0.2s !important;
+	-webkit-transition: all 0.2s !important;
+	-moz-transition: all 0.2s !important;
+	margin-right:  10px !important;
+	-webkit-appearance: none;
+}
+
+	input[type=text]:focus,
+	input[type=email]:focus,
+	input[type=password]:focus,
+	textarea:focus {
+		border:  1px solid  rgba(0,0,0,0.25) !important;
+		border-left-width: 10px !important;
+		box-shadow: none !important;
+		transition: all 0.2s !important;
+		-webkit-transition: all 0.2s !important;
+		-moz-transition: all 0.2s !important;
+		margin-right: 0px !important;
+	}
+	
+	input[type=text]:disabled:hover {
+		cursor: not-allowed;
+	}

@@ -1,0 +1,207 @@
+/* Default */
+
+.clear, #acf_458 {
+	clear: both;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Theme Options */
+
+li#customize-control-footer_link_one, li#customize-control-footer_link_two, #customize-control-footer_link_three, #customize-control-footer_link_four {
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+/* Custom Fields */
+
+#acf-expiration {
+	clear: both;
+}
+
+#acf-street_address_two {
+    margin-top: -20px;
+}
+
+#acf-street_address_two p.label {
+    display: none;
+}
+
+#acf-city {
+    float: left;
+    width: 55%;
+    margin-right: 10px;
+}
+
+#acf-state {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+}
+
+#acf-zip_code {
+    float: left;
+    width: 20%;
+}
+
+#acf-numbers, #acf-website, #acf-hours, #acf-excerpt {
+    clear: both;
+}
+
+#acf-excerpt textarea {
+	height: 50px !important;
+	min-height: auto !important;
+}
+
+#acf-date, #acf-time {
+    float: left;
+    width: 30%;
+    margin-right: 10px;
+}
+
+#acf-start_time, #acf-start_time_am_pm, #acf-end_time, #acf-end_time_am_pm {
+    width: 10%;
+    float: left;
+    margin-right:  5px;
+}
+
+	#acf-start_time_am_pm {
+		margin-right:  15px;
+	}
+	
+#acf-place {
+	clear: both;
+}
+	
+#acf-address, #acf-place {
+	width: 45%;
+	margin-right: 5%;
+	float: left;
+}
+
+#acf-description {
+	clear: both;
+}
+
+#acf-aba_business_member {
+    clear: both;
+}
+
+#acf-aba_business_member p.label {
+    display: none;
+}
+
+#acf-aba_business_member, #acf-logo {
+    width: 48%;
+    float: left;
+}
+
+#acf-aba_member, #acf-image {
+    width: 48%;
+    float: right;
+}
+
+#acf-promotions {
+    clear: both;
+}
+
+    #acf-promotions p.label label {
+        font-size: 18pt;
+        font-weight: bold;
+    }
+    
+#acf- {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    clear: both;
+}
+
+    #acf- p {
+        font-size:  18pt;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+#acf-aba_membership {
+    font-size: 10pt;
+    font-weight: bold;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    padding: 12px 20px 10px 20px;
+    float: left;
+    width: 40%;
+    margin-right: 20px;
+}
+
+    #acf-aba_membership p.label {
+        display: none;
+    }
+
+#acf-member_id {
+    float: left;
+    width: 45%;
+}
+
+    #acf-member_id p.label label {
+        font-size:  8pt;
+        float: left;
+        width: 30%;
+        margin-top: 3px;
+        }
+    
+    #acf-member_id select {
+        float: left;
+        width: 65%;
+        margin-top: -15px;
+    }
+    
+#acf-social {
+    clear: both;
+}
+
+/* Miscellaneous */
+
+.login h1 a {
+	background-image:  url(/wp-content/themes/aba/images/logo.png");
+}
+
+/* For Admin Menu */
+
+li.wp-menu-separator {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #111111;
+}
+
+li.menu-icon-issues:before {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #111111;
+    height: 5px;
+    content: "";
+    display: block;
+}
+
+li#wp-admin-bar-my-account {
+	white-space: nowrap;
+}
+
+li#menu-posts-marquee {
+	display: none;
+}
+
+/* For Multisite */
+
+#multisite_clone_metabox {
+    display: none;
+}
+
+ul#wp-admin-bar-my-sites-list li .ab-sub-wrapper ul li:nth-child(2), 
+ul#wp-admin-bar-my-sites-list li .ab-sub-wrapper ul li:nth-child(3) {
+    display: none;
+}
