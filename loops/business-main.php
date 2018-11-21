@@ -1,3 +1,7 @@
+<?php
+	$currentYear = date('Y');
+?>
+
 <section id="map">
 
 	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12225.039332936814!2d-75.29489769121746!3d40.002643313502745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1463281288208" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -101,7 +105,23 @@
 				
 							<?php foreach( $posts as $post ):setup_postdata( $post ) ?>
 							
-								<tr class="search-result">
+								<?php
+									if( get_field('aba_membership') ) {
+										$businessID = get_the_id();
+										$currentDay = date(z) + 1;
+										$cutoffTrigger = 60;
+										if ($currentDay > $cutoffTrigger) {
+											$currentExpiration = get_field('expiration');
+											if ($currentExpiration < $currentYear) {
+	    		    							update_post_meta( $businessID, 'aba_membership', '0' );
+	    		    						} else {
+	    		    									
+	    		    						}
+										};
+									};
+								?>
+							
+								<tr class="search-result" <?php if ($currentExpiration < $currentYear) { ?>style="display: none;"<?php } ?>>
 									<td class="title">
 										<?php if( get_field('aba_membership') ) { ?>
 											<a href="<?php the_permalink(); ?>" data-track="view-listing">
