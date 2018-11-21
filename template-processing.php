@@ -27,7 +27,20 @@ Template Name: Processing Page
 
             <?php
     		    $businessID = $_GET['businessID'];
-    		    $expiration = $_GET['expiration'];
+    		    //$expiration = $_GET['expiration'];
+    		    $currentExpiration = get_field('expiration', $businessID);
+    		    $currentYear = date('Y');
+    		    $currentDay = date(z) + 1;
+	    		$nextYearTrigger = 335;
+    		    if ($currentExpiration < $currentYear) {
+    		    	if ($currentDay > $nextYearTrigger) {
+    		    		$expiration = $currentYear + 1;
+    		    	} else {
+    		    		$expiration = $currentYear;
+    		    	};
+    		    } else {
+    		    	$expiration = $currentExpiration + 1;
+    		    }
     		    $redirect_url = site_url() . '/member-dashboard/?membership=renewed&businessID=' . $businessID . '';
     		    update_post_meta( $businessID, 'aba_membership', '1' );
     		    update_post_meta( $businessID, 'expiration', $expiration );
@@ -46,7 +59,20 @@ Template Name: Processing Page
 
                 <?php
         		    $businessID = $_GET['businessID'];
-        		    $expiration = $_GET['expiration'];
+        		    //$expiration = $_GET['expiration'];
+        		    $currentExpiration = get_field('expiration', $businessID);
+	    		    $currentYear = date('Y');
+	    		    $currentDay = date(z) + 1;
+		    		$nextYearTrigger = 335;
+	    		    if ($currentExpiration < $currentYear) {
+	    		    	if ($currentDay > $nextYearTrigger) {
+	    		    		$expiration = $currentYear + 1;
+	    		    	} else {
+	    		    		$expiration = $currentYear;
+	    		    	};
+	    		    } else {
+	    		    	$expiration = $currentExpiration + 1;
+	    		    }
         		    $redirect_url = site_url() . '/member-dashboard//member-administration/?membership=renewed&businessID=' . $businessID . '';
         		    update_post_meta( $businessID, 'aba_membership', '1' );
         		    update_post_meta( $businessID, 'expiration', $expiration );
@@ -85,7 +111,15 @@ Template Name: Processing Page
     		    $memberID = $_GET['memberID'];
     		    $business = $_GET['business'];
     		    $businessID = $_GET['businessID'];
-    		    $expiration = $_GET['expiration'];
+    		    //$expiration = $_GET['expiration'];
+    		    $currentYear = date('Y');
+    		    $currentDay = date(z) + 1;
+	    		$nextYearTrigger = 244;
+    		    if ($currentDay > $nextYearTrigger) {
+    		    	$expiration = $currentYear + 1;
+    		    } else {
+    		    	$expiration = $currentYear;
+    		    };
     		    $redirect_url = site_url() . '/member-dashboard/member-administration/?account=processed&memberID=' . $memberID . '&businessID=' . $businessID . '';
     		    update_post_meta( $memberID, 'status', 'completed' );
     		    update_post_meta( $businessID, 'aba_membership', '1' );
