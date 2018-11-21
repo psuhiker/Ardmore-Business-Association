@@ -84,6 +84,10 @@
 	
 		<h2><span>Ardmore Business Association Members</span></h2>
 		
+		<?php
+			$currentYear = date('Y');
+		?>
+		
 		<ul>
 		
 		<?php 
@@ -98,8 +102,24 @@
 		    if( $posts ): ?>
 			
 				<?php foreach( $posts as $post ):setup_postdata( $post ) ?>
+				
+					<?php
+						if( get_field('aba_membership') ) {
+							$businessID = get_the_id();
+							$currentDay = date(z) + 1;
+							$cutoffTrigger = 60;
+							if ($currentDay > $cutoffTrigger) {
+								$currentExpiration = get_field('expiration');
+								if ($currentExpiration < $currentYear) {
+	    		    				update_post_meta( $businessID, 'aba_membership', '0' );
+	    		    			} else {
+	    		    									
+	    		    			}
+							};
+						};
+					?>
 			
-					<li><a href="<?php the_permalink(); ?>" data-track="view-listing"><?php the_title(); ?></a></li>
+					<li <?php if ($currentExpiration < $currentYear) { ?>style="display: none;"<?php } ?>><a href="<?php the_permalink(); ?>" data-track="view-listing"><?php the_title(); ?></a></li>
 			
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); ?>
