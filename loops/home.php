@@ -11,7 +11,7 @@
     	
     		<div class="col-sm-4 sidebar sidebar-left">
     		
-    			<!--<img src="/wp-content/uploads/2018/11/C95D42D0-A427-48B4-ACE9-9BC9AB5B313D.jpeg">-->
+    			<img src="https://www.ardmoreshops.com/wp-content/uploads/2018/12/248BF3A0-C39A-4740-A679-E6713D445230.jpeg">
     		
     			<br><br>
     			
