@@ -24,7 +24,7 @@
 			<p class="address"><?php the_field('street_address') ?><?php if(get_field('street_address_two' )) { ?>, <?php the_field('street_address_two') ?><?php } ?></p>
 			<p class="address"><?php the_field('city') ?>, <?php the_field('state') ?> <?php the_field('zip_code') ?></p>
 					
-			<ul class="phone">
+			<ul class="phone list-unstyled">
 				<?php if( have_rows('numbers') ): ?>
 					<?php while ( have_rows('numbers') ) : the_row(); ?>
 						<?php $numbers_type = get_sub_field('type'); ?>
@@ -42,6 +42,31 @@
 				</div>
 			<?php } ?>
 			
+			<?php if( have_rows('hours') ): ?>
+				
+				<div class="hours">
+				
+					<h4><?php the_title(); ?> Hours</h4>
+						
+					<table class="table">
+						
+						<?php while ( have_rows('hours') ) : the_row(); ?>
+							
+							<tr>
+								<td><?php the_sub_field('label'); ?>:</td>
+								<td><?php the_sub_field('details'); ?></td>
+							</tr>
+							
+						<?php endwhile; ?>
+							
+					</table>
+						
+					<div class="clear"></div>
+					
+				</div>
+					
+			<?php else : endif; ?>
+			
 			<div class="social-share">
 				<p><strong>Share This</strong></p>
 				<ul>
@@ -57,6 +82,24 @@
 		<div class="col-sm-8 col-xs-12 main-content">
 		
 			<h1><?php the_title(); ?></h1>
+			
+			<div class="default-padding--bottom">
+			
+				<?php if( have_rows('social') ): ?>
+					<?php while ( have_rows('social') ) : the_row(); ?>
+							
+						<a href="<?php the_sub_field('url'); ?>" target="_blank" class="btn btn-blue" class="btn btn-red" data-track="outbound-link"><i class="fa fa-<?php the_sub_field('service'); ?>" aria-hidden="true" class="btn btn-red" data-track="outbound-link"></i></a>
+								
+					<?php endwhile; ?>
+				<?php else : endif; ?>
+				
+				<?php if( get_field('website') ) { ?>
+					<a href="<?php the_field('website'); ?>" target="_blank" class="btn btn-blue business-page link-click">
+						<i class="fa fa-laptop" aria-hidden="true" class="btn btn-red" data-track="outbound-link"></i>
+					</a>
+				<?php } ?>
+				
+			</div> 
 		
 			<div class="description">
 		    	<?php the_field('focus_content', $focusID); ?>

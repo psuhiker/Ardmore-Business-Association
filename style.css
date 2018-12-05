@@ -3731,3 +3731,7 @@ body.processing .inner {
     top: 200px;
     right: 20px;
 }
+
+.profile .hours .table {
+	font-size: 10pt !important;
+}
