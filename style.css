@@ -1406,7 +1406,8 @@ section#marquee {
 		overflow: hidden;
 	}
 
-section#map {
+section#map,
+.profile section#title {
 	position: relative;
 	/*-webkit-clip-path: polygon(100% 0, 100% 70%, 70% 80%, 0 70%, 0 0);
 	clip-path: polygon(100% 0, 100% 70%, 70% 80%, 0 70%, 0 0);
@@ -2214,24 +2215,29 @@ section h4 {
 
 	}
 
-		.event.single .sidebar p {
+		.event.single .sidebar p,
+		.profile .sidebar p {
 			margin: 0px;
 			padding: 0px;
 		}
 
-		.event.single .sidebar .details_time {
+		.event.single .sidebar .details_time,
+		.profile .sidebar .details_time {
 			margin: 0px 0px 40px 0px;
 		}
 
-		.event.single .sidebar .location {
+		.event.single .sidebar .location,
+		.profile .sidebar.location {
 			margin:  0px 0px 40px 0px;
 		}
 
-		.event.single .sidebar .aba-member {
+		.event.single .sidebar .aba-member,
+		.profile .sidebar .aba-member {
 			margin:  0px 0px 40px 0px;
 		}
 
-			.event.single .sidebar .aba-member .profile-link {
+			.event.single .sidebar .aba-member .profile-link,
+			.profile .sidebar .aba-member .profile-link {
 				margin:  10px 0px 0px 0px;
 			}
 
@@ -2239,19 +2245,22 @@ section h4 {
 
 		}
 
-			.event.single .sidebar .social-share ul {
+			.event.single .sidebar .social-share ul,
+			.profile .sidebar .social-share ul {
 				margin: 0px;
 				padding: 5px 0px 0px 0px;
 			}
 
-				.event.single .sidebar .social-share ul li {
+				.event.single .sidebar .social-share ul li,
+				.profile .sidebar .social-share ul li {
 					display: inline;
 					list-style: none;
 					margin: 0px;
 					padding: 0px;
 				}
 
-					.event.single .sidebar .social-share ul li img {
+					.event.single .sidebar .social-share ul li img,
+					.profile .sidebar .social-share ul li img {
 						transition: all 0.2s;
 						-webkit-transition: all 0.2s;
 						-moz-transition: all 0.2s;
@@ -2260,7 +2269,8 @@ section h4 {
 						height: auto;
 					}
 
-						.event.single .sidebar .social-share ul li img:hover {
+						.event.single .sidebar .social-share ul li img:hover,
+						.profile .sidebar .social-share ul li img:hover {
 							transition: all 0.2s;
 							-webkit-transition: all 0.2s;
 							-moz-transition: all 0.2s;

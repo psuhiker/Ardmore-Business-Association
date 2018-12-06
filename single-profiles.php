@@ -2,36 +2,20 @@
 <?php include (TEMPLATEPATH . '/google.php' ); ?>
 </head>
 
-<body class="secondary post event single sidebar-left profile">
+<body class="secondary post xevent businesses business single sidebar-left profile">
 
 	<?php include (TEMPLATEPATH . '/header.php' ); ?>
 
-	<?php
-		$focusID = get_the_id();
-		$post_object = get_field('focus_business');
-		if($post_object):
-			$post = $post_object;
-			setup_postdata($post);
-	?>
-	
-		<?php 
-			the_title();
-			if( have_rows('focus_photos') ): ?>has photos
-			<?php while ( have_rows('focus_photos') ) : the_row(); 
-		?>
-			the photo
-			<?php the_sub_field('focus_photos_photo'); ?>
-		<?php 
+	<?php 
+		if( have_rows('focus_photos') ):
+			while ( have_rows('focus_photos') ) : the_row();
+				$bg = get_sub_field('focus_photos_photo');
+				break;
 			endwhile;
-			else : endif;
-		?>
-	
-	<?php
-		wp_reset_postdata;
-		endif;
+		else : endif; 
 	?>
 	
-	<section id="title">
+	<section id="title" style="background-image: url(<?php echo $bg; ?>)">
 	
 	    <div class="coverup"></div>
 	    

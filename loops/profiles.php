@@ -9,7 +9,7 @@
 	?>
 
 	<div class="container">
-	
+		
 		<div class="col-sm-4 col-xs-12 sidebar sidebar-right">
 		
 			<br/>
@@ -83,7 +83,7 @@
 		
 			<h1><?php the_title(); ?></h1>
 			
-			<div class="default-padding--bottom">
+			<div class="default-padding--bottom businesses single">
 			
 				<?php if( have_rows('social') ): ?>
 					<?php while ( have_rows('social') ) : the_row(); ?>
@@ -104,6 +104,37 @@
 			<div class="description">
 		    	<?php the_field('focus_content', $focusID); ?>
 		    </div>
+		    
+		    <?php if( have_rows('focus_photos', $focusID) ): ?>
+				<section id="carousel" class="xl-margin--top">
+					<div id="photo-carousel" class="carousel fade" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<?php $indicatorCounter = 0; ?>
+							<?php while ( have_rows('focus_photos', $focusID) ) : the_row(); ?>
+							    <li data-target="#photo-carousel" data-slide-to="<?php echo $indicatorCounter; ?>" class="<?php if( $indicatorCounter == '0' ) { ?>active<?php } ?>"></li>
+							    <?php $indicatorCounter++; ?>
+							<?php endwhile; ?>
+						</ol>
+						<div class="carousel-inner" role="listbox">
+							<?php $photoCounter = 0; ?>
+							<?php while ( have_rows('focus_photos', $focusID) ) : the_row(); ?>
+								<div class="item <?php if( $photoCounter == '0' ) { ?>active<?php } ?>">
+							      	<img src="<?php the_sub_field('focus_photos_photo', $focusID); ?>">
+							    </div>
+							    <?php $photoCounter++; ?>
+							<?php endwhile; ?>
+						</div>
+						<a class="left carousel-control" href="#photo-carousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#photo-carousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</section> 
+			<?php else : endif; ?>
     		
     		<br><br>
 		    
