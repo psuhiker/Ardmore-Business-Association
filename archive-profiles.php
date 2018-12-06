@@ -2,28 +2,25 @@
 <?php include (TEMPLATEPATH . '/google.php' ); ?>
 </head>
 
-<body class="secondary post businesses business single sidebar-left profile">
+<body class="secondary post businesses business main sidebar-left profile">
 
 	<?php include (TEMPLATEPATH . '/header.php' ); ?>
-
-	<?php 
-		if( have_rows('focus_photos') ):
-			while ( have_rows('focus_photos') ) : the_row();
-				$bg = get_sub_field('focus_photos_photo');
-				break;
-			endwhile;
-		else : endif; 
-	?>
 	
-	<section id="title" style="background-image: url(<?php echo $bg; ?>)">
+	<section id="title">
 	
 	    <div class="coverup"></div>
+	        
+	    <div class="copy">
+	        
+	        <h1 style="text-align: center; margin-top: 10px;">Focus on the Member Series</h1>
+	        
+	    </div>
 	    
 	</section>
 	
 	<div id="content">
-	
-		<?php include (TEMPLATEPATH . '/loops/profiles.php' ); ?>
+		
+		<?php include (TEMPLATEPATH . '/loops/profiles-main.php' ); ?>
 	
 	</div>
 	

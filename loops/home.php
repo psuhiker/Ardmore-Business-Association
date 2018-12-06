@@ -63,13 +63,13 @@
     		
     			<div class="panel panel-default">
     			
-    				<div class="panel-heading">Ardmore News</div>
+    				<div class="panel-heading">ABA Focus on the Member Series</div>
     				
     				<ul class="list-group">
     				
     					<?php 
     					    $posts = get_posts(array(
-    						    'post_type' => 'news',
+    						    'post_type' => 'profiles',
     						    'posts_per_page' => 3
     					    ));
     					if( $posts ): ?>
@@ -90,7 +90,7 @@
     				
     				</ul>
     				
-    				<p class="more"><a class="button red small" href="/news/">All News <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+    				<p class="more"><a class="button red small" href="<?php echo site_url(); ?>/profiles/">All Profiles <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
     				
     			</div>
     		
