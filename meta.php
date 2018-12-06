@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/js/flexslider/flexslider.css" type="text/css" media="screen" />
     
     <!-- Main Style Sheets -->
-    <link href="<?php bloginfo('template_directory'); ?>/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php bloginfo('template_directory'); ?>/style.css?version=<?php echo rand(0,9999); ?>" type="text/css" rel="stylesheet">
     	
     <!-- Framework JavaScript -->
     <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/modernizr.custom.js"></script>
