@@ -129,7 +129,15 @@
 					<?php get_post_type( $post ) ?>
 					<?php if ( 'events' == get_post_type() ) { ?>
 					
-						<?php include (TEMPLATEPATH . '/loops/display-events.php' ); ?>
+						<?php 
+							$today = date(Ymd);
+							$date = get_field('date', false, false);
+							if($today > $date) { } else {
+						?>
+					
+							<?php include (TEMPLATEPATH . '/loops/display-events.php' ); ?>
+						
+						<?php } ?>
 					
 					<?php } elseif ( 'news' == get_post_type() ) { ?>
 					
