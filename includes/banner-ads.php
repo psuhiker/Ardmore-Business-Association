@@ -3,12 +3,25 @@
         
         <?php $adCounter = 0; ?>
     
-        <?php query_posts(array('showposts', 'posts_per_page'=> '-1', 'post_type'=> 'businesses', 'meta_key' => 'aba_membership', 'meta_value' => '1', 'orderby' => 'rand', 'order' => 'ASC')); while (have_posts()) { the_post(); ?>
+        <?php 
+        	query_posts(array(
+	        	'showposts', 
+	        	'posts_per_page'=> '-1', 
+	        	'post_type'=> 'businesses', 
+	        	'meta_key' => 'aba_membership', 
+	        	'meta_value' => '1', 
+	        	'orderby' => 'rand', 
+	        	'order' => 'ASC')); 
+        	while (have_posts()) { the_post(); 
+        ?>
         
         	<?php while ( have_rows('promotions') ) : the_row(); ?>
         	
         		<?php if( get_sub_field('banner_ad') ) { ?>
         		    <div class="item <?php if( $adCounter == '0' ) { ?>active<?php } ?>" data-track="ad-impression" data-ad="<?php the_sub_field('banner_ad'); ?>" data-link="<?php the_sub_field('link'); ?>">
+        		    	<?php if( current_user_can('administrator')) { ?>
+        		    		<p class="admin-data">Admin Notice:<br><?php the_title(); ?></p>
+        		    	<?php } ?>
         		    	<?php if( get_sub_field('link') ) { ?><a href="<?php the_sub_field('link'); ?>" target="_blank" data-track="ad-click"><?php } ?>
         		    		<img src="<?php the_sub_field('banner_ad'); ?>">
         		    	<?php if( get_sub_field('link') ) { ?></a><?php } ?>
