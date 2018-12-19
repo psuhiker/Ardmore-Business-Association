@@ -865,6 +865,12 @@ section.section-four {
 	max-width: 100%;
 }
 
+	.ads .admin-data {
+		font-family: monospace;
+		font-size: 8pt;
+		line-height: 10pt;
+	}
+
 	.ads .ad {
 		font-size: 8pt;
 		text-align: center;
@@ -1264,6 +1270,7 @@ section#carousel {
 
 .sidebar {
 	padding-bottom: 50px;
+	min-height: 500px;
 }
 
     .sidebar .input-group {
