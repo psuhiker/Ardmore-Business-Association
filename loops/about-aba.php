@@ -118,8 +118,8 @@
 							};
 						};
 					?>
-			
-					<li <?php if ($currentExpiration < $currentYear) { ?>style="display: none;"<?php } ?>><a href="<?php the_permalink(); ?>" data-track="view-listing"><?php the_title(); ?></a></li>
+			<!--<?php //if ($currentExpiration < $currentYear) { ?>style="display: none;"<?php //} ?>-->
+					<li><a href="<?php the_permalink(); ?>" data-track="view-listing"><?php the_title(); ?></a></li>
 			
 				<?php endforeach; ?>
 				<?php wp_reset_postdata(); ?>

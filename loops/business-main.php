@@ -121,7 +121,8 @@
 									};
 								?>
 							
-								<tr class="search-result" <?php if ($currentExpiration < $currentYear) { ?>style="display: none;"<?php } ?>>
+							<!--<?php //if ($currentExpiration < $currentYear) { ?>style="display: none;"<?php //} ?>-->
+								<tr class="search-result">
 									<td class="title">
 										<?php if( get_field('aba_membership') ) { ?>
 											<a href="<?php the_permalink(); ?>" data-track="view-listing">

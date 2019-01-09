@@ -61,9 +61,13 @@
 <?php
     $user_id = get_current_user_id();
     $current_date = date(Y);
+    //echo $current_date;
     $next_year = date(Y) + 1;
+    //echo $next_year;
     $dues_request_start = 274;
+    //echo $dues_request_start;
     $current_day = date(z) + 1; //274
+    //echo $current_day;
 ?>
 <?php if( have_rows('businesses', 'user_'. $user_id ) ): ?>
     <?php while( have_rows('businesses', 'user_'. $user_id ) ): the_row(); ?>
@@ -71,23 +75,24 @@
 
             <?php
                 $current_expiration = get_field('expiration');
+                //echo $current_expiration;
             ?>
 
             <?php if ($current_expiration <= $current_date) { ?>
 
-                <?php if ($current_day > $dues_request_start) { ?>
+                <?php //if ($current_day > $dues_request_start) { ?>
 
                     <div class="well lg-margin--bottom">
 
                         <h2>Attention<?php global $current_user; get_currentuserinfo(); echo ' '; echo $current_user->first_name; ?>,</h2>
 
-                        <p>Membership dues for <?php echo $next_year; ?> are now being collected. Please renew your membership dues in order to continue with your Ardmore Business Association benefits, including access to your online listing.</p>
+                        <p>Membership dues for the current year are now being collected. Please renew your membership dues in order to continue with your Ardmore Business Association benefits, including access to your online listing.</p>
 
                         <p><a href="<?php echo site_url(); ?>/association/join/confirmation/?renewal=true&firstName=<?php echo $current_user->first_name; ?>&lastName=<?php echo $current_user->last_name; ?>&business=<?php the_title(); ?>&businessID=<?php the_id(); ?>" class="btn buttn btn-red">Pay Dues Online</a></p>
 
                     </div>
 
-                <?php } else { ?><?php } ?>
+                <?php //} else { ?><?php //} ?>
 
             <?php } else { ?><?php } ?>
 
