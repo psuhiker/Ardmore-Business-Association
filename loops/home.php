@@ -126,7 +126,7 @@
     		
     			<div class="clear"></div>
     			
-    			<div class="col-xs-12">
+    			<!--<div class="col-xs-12">
     				<p class="featured"><span>Featured</span></p>
     			</div>
     			
@@ -251,7 +251,6 @@
         			            		</div>
         			            	</div>
         			            	<div class="caption">
-        			            	    <!--<?php the_id(); ?>-->
         			            		<p class="description"><?php the_field('excerpt'); ?></p>
         			            		<div class="clear"></div>
         			            		<p class="more"><a href="<?php the_permalink(); ?>" class="button small blue" data-track="featured-click">Event Details <i class="fa fa-long-arrow-right" aria-hidden="true" data-track="featured-click"></i></a><div class="clearfix"></div></p>
@@ -313,7 +312,7 @@
     			        
     			<?php endwhile; else : endif; ?>
     			
-    			<div class="clear"></div>
+    			<div class="clear"></div>-->
     			
     			<div class="col-md-12 copy">
     			
@@ -334,6 +333,11 @@
     					<p><a href="<?php the_field('secondary_call_to_action_link'); ?>" data-track="learn-about-membership"><?php the_field('secondary_call_to_action_text'); ?></a></p>
     				
     				</div>
+					
+					<div class="col-sm-12">
+						<br><br>
+						<?php echo do_shortcode("[custom-facebook-feed]"); ?>
+					</div>
     			
     			</div>
     		
