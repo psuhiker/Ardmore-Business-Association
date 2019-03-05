@@ -387,7 +387,7 @@
 									$current_expiration = get_field('expiration');
 					    		?>
 
-								<?php if( get_field('member_id') ) { ?>
+								<?php //if( get_field('member_id') ) { ?>
 
 								    <tr class="member item search-result">
 										<td data-label="Business">
@@ -405,9 +405,18 @@
 										</td>
 										<td>
 
-											<?php if ($current_expiration <= $current_date) { ?>
+											<?php if ($current_expiration < $current_date) { ?>
 
-												<?php if ($current_day > $dues_request_start) { ?>
+												<?php //if ($current_day > $dues_request_start) { ?>
+												
+
+<?php
+	//echo 'date:';
+	//echo $current_date;
+	//echo 'exp';
+	//echo $current_expiration;
+?>
+
 
 													<a class="btn btn-blue" data-toggle="modal" data-target="#applyPaymentModal<?php the_id(); ?>">Apply Payment</a>
 
@@ -437,7 +446,7 @@
 													    </div>
 													</div>
 
-												<?php } else { ?>&nbsp;<?php } ?>
+												<?php //} else { ?>&nbsp;<?php //} ?>
 
 											<?php } else { ?>
 												<small>Paid Through <?php the_field('expiration'); ?></small>
@@ -446,7 +455,7 @@
 										</td>
 									</tr>
 
-								<?php } ?>
+								<?php //} ?>
 
 
 							<?php endforeach; ?>
