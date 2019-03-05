@@ -82,7 +82,7 @@
 
                 <?php //if ($current_day > $dues_request_start) { ?>
 
-                    <div class="well lg-margin--bottom">
+                    <!--<div class="well lg-margin--bottom">
 
                         <h2>Attention<?php global $current_user; get_currentuserinfo(); echo ' '; echo $current_user->first_name; ?>,</h2>
 
@@ -90,7 +90,7 @@
 
                         <p><a href="<?php echo site_url(); ?>/association/join/confirmation/?renewal=true&firstName=<?php echo $current_user->first_name; ?>&lastName=<?php echo $current_user->last_name; ?>&business=<?php the_title(); ?>&businessID=<?php the_id(); ?>" class="btn buttn btn-red">Pay Dues Online</a></p>
 
-                    </div>
+                    </div>-->
 
                 <?php //} else { ?><?php //} ?>
 
