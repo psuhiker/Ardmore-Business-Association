@@ -93,26 +93,30 @@
 	    	<?php 
 	    		$member = get_field('member_id');
 	    		$member_name = $member['display_name'];
+	    		$member_email = $member['user_email'];
 	    	?>
 	    
-	    <?php if( get_field('member_id') ) { ?>
+	    <?php //if( get_field('member_id') ) { ?>
 			<tr class="search-result">
 				<td>
 					<?php the_title(); ?>
 					<div class="collapse" id="business<?php the_id(); ?>">
 						<table>
-							<?php if( get_field('email') ) { ?>
+							<?php //if( get_field('email') ) { ?>
 								<tr>
 									<td>
 										Email:
 									</td>
 									<td>
-										<a href="mailto:<?php the_field('email'); ?>">
-											<?php the_field('email'); ?>
+										<a href="mailto:<?php echo $member_email; ?>">
+											<?php echo $member_email; ?>
 										</a>
+										<!--<a href="mailto:<?php the_field('email'); ?>">
+											<?php the_field('email'); ?>
+										</a>-->
 									</td>
 								</tr>
-							<?php } ?>
+							<?php //} ?>
 							<?php if( get_field('website') ) { ?>
 								<tr>
 									<td>
@@ -152,7 +156,7 @@
 					</a>
 				</td>
 			</tr>
-	    <?php } ?>
+	    <?php //} ?>
 	    
 	    <?php endforeach; ?>
 	    <?php wp_reset_postdata(); ?>

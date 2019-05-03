@@ -385,6 +385,7 @@
 									$member_firstName = $member['first_name'];
 									$member_lastName = $member['last_name'];
 									$current_expiration = get_field('expiration');
+									$member_email = $member['user_email'];
 					    		?>
 
 								<?php //if( get_field('member_id') ) { ?>
@@ -397,11 +398,14 @@
 											<?php echo $member_name; ?>
 										</td>
 										<td data-label="Email" class="text-nowrap">
-											<?php if( get_field('email') ) { ?>
+											<a href="mailto:<?php echo $member_email; ?>">
+												<?php echo $member_email; ?>
+											</a>
+											<!--<?php if( get_field('email') ) { ?>
 												<a href="mailto:<?php the_field('email'); ?>">
 													<?php the_field('email'); ?>
 												</a>
-											<?php } ?>
+											<?php } ?>-->
 										</td>
 										<td>
 
