@@ -31,6 +31,12 @@ li#customize-control-footer_link_one, li#customize-control-footer_link_two, #cus
     display: none;
 }
 
+#acf-end_date {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
 #acf-city {
     float: left;
     width: 55%;

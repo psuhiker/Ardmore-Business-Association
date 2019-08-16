@@ -13,11 +13,18 @@
 			<?php 
 				$date = get_field('date', false, false);
 				$date = new DateTime($date);
+				$end_date = get_field('end_date', false, false);
+				$end_date = new DateTime($end_date);
 			?>
 		
 			<div class="details_time">
 				<p class="time-label"><strong>When</strong></p>
-				<p class="date"><?php echo $date->format('F j, Y'); ?></p>
+				<p class="date">
+					<?php echo $date->format('F j, Y'); ?>
+					<?php if(get_field('end_date' )) { ?>
+					 - <?php echo $end_date->format('F j, Y'); ?>
+					<?php } ?>
+				</p>
 				<p class="time">
 					<span class="start-time"><?php the_field('start_time'); ?><span class="period"><?php the_field('start_time_am_pm'); ?></span></span>
 					<?php if(get_field('end_time' )) { ?>

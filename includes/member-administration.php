@@ -532,6 +532,7 @@
 								<!--<a class="btn btn-blue sm-margin--bottom" data-toggle="modal" data-target="#pendingModal<?php the_id(); ?>">-->
 								<a class="btn btn-blue sm-margin--bottom" onclick="updateURLTwo<?php the_id(); ?>();">Apply Payment</a>
 								<a class="btn btn-blue sm-margin--bottom" data-toggle="modal" data-target="#pendingModalView<?php the_id(); ?>">View Details</a>
+								<a class="btn btn-blue sm-margin--bottom" href="<?php site_url(); ?>/association/join/confirmation/?firstName=<?php the_field('first_name'); ?>&lastName=<?php the_field('last_name'); ?>&business=<?php the_field('business'); ?>&address=<?php the_field('address'); ?>&email=<?php the_field('email'); ?>&phone=<?php the_field('phone'); ?>&cell=<?php the_field('cell_phone'); ?>&website=<?php the_field('website'); ?>&typeOfBusiness=<?php the_field('type_of_business'); ?>&yearsInBusiness=<?php the_field('years_in_business'); ?>&applicationCode=<?php the_id(); ?>" target="_blank">Get Payment URL</a>
 							</td>
 						</tr>
 
